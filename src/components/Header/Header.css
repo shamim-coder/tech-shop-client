@@ -1,0 +1,7 @@
+.navbar-nav a {
+    margin-left: 30px;
+    color: #fff;
+}
+.cart.MuiIconButton-root {
+    padding: 0;
+}

@@ -1,0 +1,11 @@
+.MuiAvatar-root.MuiAvatar-circle.MuiAvatarGroup-avatar {
+    border-radius: inherit;
+    margin-left: 5px;
+}
+.table td, .table th {
+    vertical-align: middle;
+}
+.MuiAvatarGroup-root .MuiAvatar-root {
+    width: 44px;
+    height: 44px;
+}

@@ -1,0 +1,23 @@
+.no-cart {
+    height: 100vh;
+    margin-top: -60px;
+}
+.continue-shopping-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    background: #f57224;
+    display: inline-block;
+    margin-top: 20px;
+    transition: .3s;
+}
+.continue-shopping-btn:hover {
+    text-decoration: none;
+    color: whitesmoke;
+    background: #f3600b;
+}
+.shopping-btn a {
+    margin-left: 15px;
+}

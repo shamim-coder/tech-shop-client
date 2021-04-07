@@ -39,7 +39,7 @@ const ManageProducts = () => {
                             <tr>
                                 <th>#</th>
                                 <th>Product Name</th>
-                                <th>Weight</th>
+                                <th>Brand</th>
                                 <th>Price</th>
                                 <th>Photo</th>
                                 <th>Action</th>
@@ -48,12 +48,12 @@ const ManageProducts = () => {
                         <tbody className="product-list">
                             {
                                 products.map((product, index) => {
-                                    const { _id, name, weight, image, price } = product
+                                    const { _id, name, brand, image, price } = product
                                     return (
                                         <tr key={_id}>
                                             <td>{index + 1}</td>
                                             <td>{name}</td>
-                                            <td>{weight}</td>
+                                            <td>{brand}</td>
                                             <td>${price}</td>
                                             <td className="product-img"><img src={image} alt={name} /></td>
                                             <td className="product-action">

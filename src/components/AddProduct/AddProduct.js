@@ -52,9 +52,9 @@ const AddProduct = () => {
                         <Form.Control type="text" placeholder="Enter Name" {...register("name", { required: true })} />
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="weight">
-                        <Form.Label> <strong>Weight</strong></Form.Label>
-                        <Form.Control type="text" placeholder="Enter Weight" {...register("weight", { required: true })} />
+                    <Form.Group as={Col} controlId="brand">
+                        <Form.Label> <strong>Brand</strong></Form.Label>
+                        <Form.Control type="text" placeholder="Enter Brand" {...register("brand", { required: true })} />
                     </Form.Group>
                 </Form.Row>
 
@@ -68,11 +68,11 @@ const AddProduct = () => {
                         <Form.Label> <strong>Add Photo </strong></Form.Label> <br />
                         <Form.Label className="custom-upload">  <CloudUpload /> <strong>Upload Photo </strong></Form.Label> <span>{fileName}</span>
                         <Form.File onChange={handleImageUpload} name="image" />
-                        {imageUrl && <span className="success-msg"> Product added to your database</span>}
+                        {imageUrl && <span className="success-msg"> Image Upload Successfully</span>}
                     </Form.Group>
                 </Form.Row>
                 <Button variant="primary" type="submit">Save</Button>
-                {(errors.name || errors.weight || errors.price) && <span className="error-msg"> fill the required field</span>}
+                {(errors.name || errors.brand || errors.price) && <span className="error-msg"> fill the required field</span>}
                 {isAdded && <span className="success-msg"> Product added to your database</span>}
             </Form>
         </div>

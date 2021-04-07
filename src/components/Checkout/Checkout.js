@@ -52,7 +52,7 @@ const Checkout = () => {
                         <thead>
                             <tr>
                                 <th>Product Name</th>
-                                <th>Product Weight</th>
+                                <th>Product Brand</th>
                                 <th>Price</th>
                             </tr>
                         </thead>
@@ -62,7 +62,7 @@ const Checkout = () => {
                                     return (
                                         <tr key={cartProduct._id}>
                                             <td>{cartProduct.name}</td>
-                                            <td>{cartProduct.weight}</td>
+                                            <td>{cartProduct.brand}</td>
                                             <td>${cartProduct.price}</td>
                                         </tr>
                                     )

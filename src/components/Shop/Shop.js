@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Shop.css'
 
 const Shop = (props) => {
-    const { _id, name, weight, price, image } = props.product
+    const { _id, name, brand, price, image } = props.product
     const handleCart = props.handleCart
     return (
         <Col md={3} className="my-3">
@@ -15,7 +15,7 @@ const Shop = (props) => {
                     </div>
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
-                        <Card.Text>{weight && 'Weight: ' + weight}</Card.Text>
+                        <Card.Text>{brand && 'Brand: ' + brand}</Card.Text>
                     </Card.Body>
                 </Link>
                 <Card.Footer className="d-flex justify-content-between align-items-center">

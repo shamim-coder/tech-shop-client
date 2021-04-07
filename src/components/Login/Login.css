@@ -1,6 +1,7 @@
 .google-login {
     height: 100vh;
     width: 100%;
+    margin-top: -56px;
 }
 .google-login .login {
     background: lightgray;
@@ -9,7 +10,11 @@
 }
 .google-login button {
     margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
 }
 .google-login button svg {
     color: #DB4437;
+    margin-right: 24px;
 }

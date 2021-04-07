@@ -3,9 +3,11 @@
     font-weight: 600;
     margin-bottom: 18px;
     display: inline-block;
+    color: #333;
 }
 .sidebar-left a svg {
     margin-right: 14px;
+    color: #dc3545;
 }
 .sidebar-left {
     padding: 40px;

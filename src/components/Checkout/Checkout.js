@@ -1,6 +1,6 @@
 
 import React, { useContext, useState } from 'react';
-import { Container, Table } from 'react-bootstrap';
+import { Button, Container, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { CartContext, UserContext } from '../../App';
 import { } from "./Checkout.css";
@@ -36,18 +36,18 @@ const Checkout = () => {
                     {okMessage
                         ? <div className="text-center">
                             <h2>{logging.name}, Thank you for your purchase!</h2>
-                            <p>to view all orders go to <Link to="/orders">order page</Link></p>
+                            <p>View all your orders, go to <Link to="/orders">order page</Link></p>
                         </div>
                         : <div className="text-center">
                             <h1>There are no items in this cart</h1>
                             <Link className="continue-shopping-btn" to="/">Continue Shopping</Link>
                         </div>
-                    }s
+                    }
 
                 </div>
 
-                : <div className="cart">
-                    <h1>Checkout</h1>
+                : <div className="cart my-4">
+                    <h1 className="mb-3">Checkout</h1>
                     <Table striped bordered hover size="sm">
                         <thead>
                             <tr>
@@ -78,8 +78,8 @@ const Checkout = () => {
                         </tfoot>
                     </Table>
                     <div className="shopping-btn text-right">
-                        <Link to="/"><button>Continue Shopping</button></Link>
-                        <button onClick={handleCheckout}>Checkout</button>
+                        <Link to="/"><Button className="mr-3" variant="danger">Continue Shopping</Button></Link>
+                        <Button onClick={handleCheckout} variant="danger">Checkout</Button>
                     </div>
                 </div>
             }

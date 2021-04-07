@@ -55,8 +55,8 @@ const ManageProducts = () => {
                                             <td>{name}</td>
                                             <td>{weight}</td>
                                             <td>${price}</td>
-                                            <td><img src={image} alt={name} /></td>
-                                            <td>
+                                            <td className="product-img"><img src={image} alt={name} /></td>
+                                            <td className="product-action">
                                                 <button onClick={() => handleDelete(_id)}><Delete /></button>
                                             </td>
                                         </tr>

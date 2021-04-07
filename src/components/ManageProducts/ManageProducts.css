@@ -15,3 +15,14 @@
 .manage-spinner {
     min-height: 100vh;
 }
+.product-list svg {
+    color: #fff;
+}
+.product-list button {
+    border: 1px solid #999;
+    padding: 5px 8px;
+    background: #dc3545;
+}
+.product-action, .product-img {
+    text-align: center;
+}

@@ -1,30 +1,35 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Spinner } from 'react-bootstrap';
 import { CartContext } from '../../App';
 import Shop from '../Shop/Shop';
+import './Home.css'
 
 const Home = () => {
     const [products, setProducts] = useState([])
     const [cart, setCart] = useContext(CartContext)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         fetch('https://tech-shop-web.herokuapp.com/products')
             .then(res => res.json())
-            .then(data => setProducts(data))
+            .then(data => {
+                setProducts(data)
+                setLoading(false)
+            })
     }, [])
 
     const handleCart = id => {
         const singleProduct = products.find(pd => pd._id === id)
         const newProduct = [...cart, singleProduct]
         setCart(newProduct)
-        console.log(newProduct);
     }
 
     return (
         <Container>
             <Row>
-                {
-                    products.map(product => <Shop handleCart={handleCart} key={product._id} product={product} />)
+                {loading
+                    ? <div className="home-spinner d-flex justify-content-center align-items-center"><Spinner animation="border" variant="danger" /></div>
+                    : products.map(product => <Shop handleCart={handleCart} key={product._id} product={product} />)
                 }
             </Row>
         </Container>

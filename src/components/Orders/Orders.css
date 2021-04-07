@@ -9,3 +9,11 @@
     width: 44px;
     height: 44px;
 }
+.order-spinner {
+    padding-top: 100px;
+}
+.recent-order h2 span {
+    font-size: 18px;
+    vertical-align: middle;
+    font-weight: 400;
+}

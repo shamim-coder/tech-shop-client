@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
+
+import React, { useContext, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { CartContext, UserContext } from '../../App';
 import { } from "./Checkout.css";
 
 const Checkout = () => {
-    const [cart] = useContext(CartContext)
+    const [cart, setCart] = useContext(CartContext)
     const [logging] = useContext(UserContext)
+    const [okMessage, setOkMessage] = useState(false)
 
     const total = cart.reduce((acc, curr) => acc + parseInt(curr.price), 0)
 
@@ -22,17 +24,26 @@ const Checkout = () => {
                 'Content-type': 'application/json; charset=UTF-8'
             },
             body: JSON.stringify(newCart)
-        }).then(res => console.log(res))
+        }).then(res => setOkMessage(res.ok))
+        setCart([])
     }
+
 
     return (
         <Container>
             {!cart.length
                 ? <div className="no-cart d-flex align-items-center justify-content-center">
-                    <div className="text-center">
-                        <h1>There are no items in this cart</h1>
-                        <Link className="continue-shopping-btn" to="/">Continue Shopping</Link>
-                    </div>
+                    {okMessage
+                        ? <div className="text-center">
+                            <h2>{logging.name}, Thank you for your purchase!</h2>
+                            <p>to view all orders go to <Link to="/orders">order page</Link></p>
+                        </div>
+                        : <div className="text-center">
+                            <h1>There are no items in this cart</h1>
+                            <Link className="continue-shopping-btn" to="/">Continue Shopping</Link>
+                        </div>
+                    }s
+
                 </div>
 
                 : <div className="cart">
@@ -49,7 +60,7 @@ const Checkout = () => {
                             {
                                 cart.map(cartProduct => {
                                     return (
-                                        <tr>
+                                        <tr key={cartProduct._id}>
                                             <td>{cartProduct.name}</td>
                                             <td>{cartProduct.weight}</td>
                                             <td>${cartProduct.price}</td>
@@ -68,7 +79,7 @@ const Checkout = () => {
                     </Table>
                     <div className="shopping-btn text-right">
                         <Link to="/"><button>Continue Shopping</button></Link>
-                        <Link to="/orders"><button onClick={handleCheckout}>Checkout</button></Link>
+                        <button onClick={handleCheckout}>Checkout</button>
                     </div>
                 </div>
             }

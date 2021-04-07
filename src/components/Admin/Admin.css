@@ -1,3 +1,22 @@
-.left-sidebar {
-    
+.sidebar-left a {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    display: inline-block;
+}
+.sidebar-left a svg {
+    margin-right: 14px;
+}
+.sidebar-left {
+    padding: 40px;
+}
+.sidebar-right-add.col-md-9 {
+    background: lightgray;
+    padding: 40px;
+    height: 100%;
+}
+.sidebar-right-list.col-md-9 {
+    background: lightgray;
+    padding: 40px;
+    height: 100vh;
 }

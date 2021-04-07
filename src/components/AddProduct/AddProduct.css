@@ -13,3 +13,15 @@ input[type="file"] {
     color: red;
     margin-left: 15px;
 }
+.success-msg {
+    color: green;
+    margin-left: 15px;
+}
+form.addProduct {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.add-container {
+    height: 100vh;
+}

@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { UserContext } from '../../App';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { useHistory, useLocation } from 'react-router';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import './Login.css'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,7 +15,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Login = () => {
 
     const [loggingUser, setLoggingUser] = useContext(UserContext)
-    const [error, setError] = useState({})
 
     const history = useHistory()
     const location = useLocation()
@@ -35,7 +34,7 @@ const Login = () => {
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                setError({ errorCode, errorMessage })
+                console.log()({ errorCode, errorMessage })
             });
     }
 

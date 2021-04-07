@@ -1,3 +1,17 @@
 .product-list img {
     width: 32px;
 }
+.manage-products .table {
+    background-color: #fff;
+}
+.manage-products thead{
+    background-color: lightgray;
+}
+.manage-products {
+    padding: 20px;
+    background: #ffff;
+    border-radius: 10px;
+}
+.manage-spinner {
+    min-height: 100vh;
+}

@@ -34,7 +34,7 @@ const ManageProducts = () => {
             {deleteMsg && <Alert severity="success">Item Deleted!</Alert>}
             {
                 loading ? <div className="manage-spinner d-flex justify-content-center align-items-center"><Spinner animation="border" variant="danger" /></div>
-                    : <Table bordered>
+                    : <Table responsive bordered>
                         <thead>
                             <tr>
                                 <th>#</th>

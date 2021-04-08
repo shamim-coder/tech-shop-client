@@ -48,7 +48,7 @@ const Checkout = () => {
 
                 : <div className="cart my-4">
                     <h1 className="mb-3">Checkout</h1>
-                    <Table striped bordered hover size="sm">
+                    <Table responsive striped bordered size="sm">
                         <thead>
                             <tr>
                                 <th>Product Name</th>

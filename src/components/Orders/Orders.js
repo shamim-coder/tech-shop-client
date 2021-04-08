@@ -27,7 +27,7 @@ const Orders = () => {
 
                 : <div className="row recent-order">
                     <h2 className="my-4">Recent Orders : (<span>{logging.email}</span>)</h2>
-                    <Table striped bordered>
+                    <Table responsive striped bordered>
                         <thead>
                             <tr>
                                 <th>Order #</th>

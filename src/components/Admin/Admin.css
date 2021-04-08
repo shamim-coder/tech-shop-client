@@ -22,3 +22,18 @@
     padding: 40px;
     height: 100vh;
 }
+
+@media only screen and (max-width: 608px) {
+    .sidebar-right-add.col-md-9 {
+        padding: 40px 0;
+    }
+    .manage-products {
+        border-radius: 0px;
+    }
+    form.addProduct {
+        border-radius: 0px;
+    }
+    .add-container {
+        height: auto;
+    }
+  }

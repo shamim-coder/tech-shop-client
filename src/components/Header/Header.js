@@ -38,7 +38,8 @@ const Header = () => {
                                 <ShoppingCartIcon />
                             </StyledBadge>
                         </Link>
-                        <Link className="login" to={email ? '/profile' : '/login'}> {email ? <Avatar alt={name} src={photo} /> : 'Login'}</Link>
+                        <Link className="login-photo" to={email ? '/profile' : '/login'}> {email ? <Avatar alt={name} src={photo} /> : 'Login'}</Link>
+                        <Link className="login-name" to={email ? '/profile' : '/login'}> {email ? <strong>{name}</strong> : 'Login'}</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -47,31 +47,31 @@ const AddProduct = () => {
         <div className="add-container">
             <Form className="addProduct" onSubmit={handleSubmit(onSubmit)}>
                 <Form.Row>
-                    <Form.Group as={Col} controlId="name">
+                    <Col md={6} controlId="name">
                         <Form.Label> <strong>Product Name</strong></Form.Label>
                         <Form.Control type="text" placeholder="Enter Name" {...register("name", { required: true })} />
-                    </Form.Group>
+                    </Col>
 
-                    <Form.Group as={Col} controlId="brand">
+                    <Col md={6} controlId="brand">
                         <Form.Label> <strong>Brand</strong></Form.Label>
                         <Form.Control type="text" placeholder="Enter Brand" {...register("brand", { required: true })} />
-                    </Form.Group>
+                    </Col>
                 </Form.Row>
 
                 <Form.Row>
-                    <Form.Group as={Col} controlId="price">
+                    <Col md={6} controlId="price">
                         <Form.Label> <strong>Add Price</strong></Form.Label>
                         <Form.Control type="number" placeholder="Enter Price" {...register("price", { required: true })} />
-                    </Form.Group>
+                    </Col>
 
-                    <Form.Group as={Col} controlId="product-image">
+                    <Col md={6} controlId="product-image">
                         <Form.Label> <strong>Add Photo </strong></Form.Label> <br />
                         <Form.Label className="custom-upload">  <CloudUpload /> <strong>Upload Photo </strong></Form.Label> <span>{fileName}</span>
                         <Form.File onChange={handleImageUpload} name="image" />
                         {imageUrl && <span className="success-msg"> Image Upload Successfully</span>}
-                    </Form.Group>
+                    </Col>
                 </Form.Row>
-                <Button variant="primary" type="submit">Save</Button>
+                <Button variant="danger" type="submit">Save</Button>
                 {(errors.name || errors.brand || errors.price) && <span className="error-msg"> fill the required field</span>}
                 {isAdded && <span className="success-msg"> Product added to your database</span>}
             </Form>

@@ -5,3 +5,20 @@
 .cart.MuiIconButton-root {
     padding: 0;
 }
+.login-name {
+    display: none;
+}
+
+@media only screen and (max-width: 990px) {
+    .login-photo {
+        display: none;
+    }
+    .login-name {
+        display: block;
+    }
+  }
+@media only screen and (max-width: 608px) {
+    .navbar-nav a {
+        margin-top: 5px;
+    }
+  }

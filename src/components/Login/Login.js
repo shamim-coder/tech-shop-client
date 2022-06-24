@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Login = () => {
 
-    const [loggingUser, setLoggingUser] = useContext(UserContext)
+    const [, setLoggingUser] = useContext(UserContext)
 
     const history = useHistory()
     const location = useLocation()

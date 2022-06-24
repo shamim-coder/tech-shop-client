@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Button, Col, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { CloudUpload } from "@material-ui/icons";
 import "./AddProduct.css";
 
 const AddProduct = () => {

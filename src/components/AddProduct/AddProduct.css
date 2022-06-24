@@ -1,14 +1,4 @@
-input[type="file"] {
-    display: none;
-}
-.custom-upload {
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: 5px 12px;
-    cursor: pointer;
-    border-radius: 5px;
-    background: azure;
-}
+
 .error-msg {
     color: red;
     margin-left: 15px;
